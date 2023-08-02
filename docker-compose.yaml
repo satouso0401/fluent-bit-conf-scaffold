@@ -1,0 +1,7 @@
+services:
+  fluent-bit:
+    image: fluent/fluent-bit
+    volumes:
+      - ./fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+      - ./input:/input:r
+      - ./output:/output:w
